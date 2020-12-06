@@ -10,6 +10,8 @@ You will receive an email confirmation and upon completion!  Sit back, relax, an
 
 ```  
  wget https://raw.githubusercontent.com/sailboat-anon/wifi-pineapple-mark-vii/main/scripts/ohc-api.sh
+ nano ohc-api.sh
+ (change the receiving email address, 'email=')
  chmod a+x ohc-api.sh
  ./ohc-api.sh 
  ```
