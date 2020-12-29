@@ -45,3 +45,6 @@ Persistent handshake storage: /root/loot/handshakes | Transaction logs: /root/lo
   __________"-_______________________/_________
   ```
  
+![successful_run](https://github.com/sailboat-anon/wifi-pineapple-mark-vii/blob/main/img/successful%20run.png)
+
+![submitted_view_ui](https://github.com/sailboat-anon/wifi-pineapple-mark-vii/blob/main/img/submitted-caps.png)
