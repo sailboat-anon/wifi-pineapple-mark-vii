@@ -13,7 +13,7 @@ You will receive an email confirmation and upon completion!  Sit back, relax, an
 ```  
  nano ohc-api.sh
  (change the receiving email address, 'email=')
- chmod a+x ohc-api.sh
+ chmod +x ohc-api.sh
  ./ohc-api.sh 
  ```
 You'll likely want to run this on a schedule (default: 5min)

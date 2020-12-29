@@ -15,10 +15,10 @@
 # ~    ~     ~  ~~   ~  ~
 #   ~     ~   ~   ~~ ~ ~  ~
 #     ~
-# chmod a+x ohc-api.sh
+# chmod +x ohc-api.sh
 # wifi pineAP v1.0.2 is very unstable and dumps /tmp/handshakes often | /tmp/handshakes is where your handshakes are stored, so when the device crashes you lose them
 # keep yout loot, run this on cron:
-# */5 * * * * /pineapple/ohc-api.sh
+# */5 * * * * /root/ohc-api.sh
 
 # workflow:
 # capture handshakes using mark vii
@@ -32,23 +32,26 @@
 
 email=sailb@home.local
 
-echo "This tool will now attempt to submit all current-state, unsubmitted handshakes in /tmp/handshakes to api.onlinehashcrack.com - Fairwinds!"
-echo "See ${log_dir} for submission logs."
+echo "Submitting all current-state, unsubmitted handshakes in /tmp/handshakes to api.onlinehashcrack.com - Fairwinds!"
+echo "See /root/loot/handshakes/logs for submission logs."
 echo "----------------------------"
 # setup our directories
 if [ ! -d "/root/loot/handshakes" ]; then
-  mkdir /root/loot/handshakes
+  mkdir -p /root/loot/handshakes
 fi
 if [ ! -d "/root/loot/handshakes/logs" ]; then
-  mkdir /root/loot/handshakes/logs
+  mkdir -p /root/loot/handshakes/logs
 fi
 
 # get all current-state, unsubmitted handshakes
 echo "Checking for unsubmitted handshakes..."
-ls /tmp/handshakes | grep -v "submitted*" > /tmp/ls-handshake.out
-if [ ! -s /tmp/ls-handshake.out ] 
-then
-	echo "Unsubmitted handshakes NOT FOUND, exiting gracefully..."
+if [ -d "/tmp/handshakes" ]; then
+  ls /tmp/handshakes | grep -v "submitted*" > /tmp/ls-handshake.out
+fi
+
+if [ ! -s /tmp/ls-handshake.out ]
+ then
+	echo "Unsubmitted handshakes NOT FOUND, exiting gracefully..." 
     exit
 fi
 
