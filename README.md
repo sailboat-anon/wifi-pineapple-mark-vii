@@ -1,4 +1,4 @@
-Fun scripts for the WiFi Pineapple Mark VII (Module Support is Light)
+Fun scripts for the WiFi Pineapple Mark VII
 
 # __ohc-api - Keep your loot! Outsource the cracking pieces.__
 
