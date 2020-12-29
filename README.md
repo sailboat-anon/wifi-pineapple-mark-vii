@@ -44,8 +44,4 @@ Persistent handshake storage: /root/loot/handshakes | Transaction logs: /root/lo
          "-.                          /
   __________"-_______________________/_________
   ```
-  
-  
-  ![run from commandline](https://pasteboard.co/JHesKW5.png)
-  
-  ![view from ui](https://pasteboard.co/JHesKW5.png)
+ 
