@@ -19,7 +19,7 @@ You will receive an email confirmation and upon completion!  Sit back, relax, an
 You'll likely want to run this on a schedule (default: 5min)
 ```
 export VISUAL=nano; crontab -e
-*/5 * * * * /pineapple/ohc-api.sh
+*/5 * * * * /root/ohc-api.sh
 ```
 
 Persistent handshake storage: /root/loot/handshakes | Transaction logs: /root/loot/handshakes/logs
