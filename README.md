@@ -2,9 +2,9 @@ Fun scripts for the WiFi Pineapple Mark VII
 
 # __ohc-api - Keep your loot! Outsource the cracking pieces.__
 
-This simple bash script for the [Hak Wifi Pineapple Mark VII](https://shop.hak5.org/products/wifi-pineapple) to fully automate your WPA war-driving and cracking.  It also keeps your handshake loot (pcab files) in a safe space so you don't lose them when the device crashes/resets/reboots.
+This simple bash script for the [Hak Wifi Pineapple Mark VII](https://shop.hak5.org/products/wifi-pineapple) to fully automate your WPA war-driving and cracking.  It also keeps your handshake loot (pcap files) in a safe space so you don't lose them when the device crashes/resets/reboots.
 
-It uses the onlinehashcrack.com API to submit your .pcab captures to their free cloud cracking service.  You'll receive an email with the results! 
+It uses the onlinehashcrack.com API to submit your .pcap captures to their free cloud cracking service.  You'll receive an email with the results! 
 
 You will receive an email confirmation and upon completion!  Sit back, relax, and automate your WPA pen-test workload with ohc-api.sh.
 
