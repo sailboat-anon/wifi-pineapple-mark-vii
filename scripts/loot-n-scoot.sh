@@ -22,7 +22,7 @@
 # wpasec_key=906ea9affd7e10a19af871a8592c8ae0
 
 # run it on cron (5 min):
-# */5 * * * * /root/loot-n-scoot.sh 
+# */5 * * * * /root/loot-n-scoot.sh -e sailboat@marina-network.local -k 906ea9affd7e10a19af871a8592c8ae0
 
 cat <<EOF
                 .'|     .8
