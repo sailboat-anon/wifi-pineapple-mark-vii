@@ -24,11 +24,6 @@
 # run it on cron (5 min):
 # */5 * * * * /root/loot-n-scoot.sh 
 
-CYAN='\033[0;36m';
-YELLOW='\033[0;33m';
-PURP='\033[1;35m';
-NC='\033[0m';
-echo $CYAN;
 cat <<EOF
                 .'|     .8
                .  |    .8:
@@ -48,7 +43,7 @@ cat <<EOF
          "-.                          /
   __________"-_______________________/_________
 EOF
-echo ${PURP} "              GA2 - sailboat-anon@gh" ${YELLOW};
+echo "              GA2 - sailboat-anon@gh";
 echo " _             _                                        _         _     
 | | ___   ___ | |_      _ __        ___  ___ ___   ___ | |_   ___| |__  
 | |/ _ \ / _ \| __|____| '_ \ _____/ __|/ __/ _ \ / _ \| __| / __| '_ \ 
@@ -61,15 +56,14 @@ do
         e) email=${OPTARG};;
         k) wpasec_key=${OPTARG};;
     esac
-done
-echo ${NC};
+
 if [ -z "$email" ] || [ -z "$wpasec_key" ]
 then
    echo "Syntax:";
    echo "    ./loot-n-scoot.sh -e <your@emailaddress.com | ENV_VAR_EMAIL> -k <your_wpa_sec_key | ENV_VAR_WPASEC_KEY>";
    echo "Examples:";
    echo "    1) ./loot-n-scoot.sh -e sailboat@marina-network.local -k 906ea9affd7e10a19af871a8592c8aen ";
-   echo "    2) export email=sailboat@marina-network.local; export wpasec_key=906ea9affd7e10a19af871a8592c8aen; ash loot-n-scoot.sh";
+   echo "    2) export email=sailboat@marina-network.local; export wpasec_key=906ea9affd7e10a19af871a8592c8aen; bash loot-n-scoot.sh";
 fi
 
 echo "> See /root/loot/handshakes/logs for submission logs"
