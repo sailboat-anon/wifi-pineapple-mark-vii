@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 # sailboat-anon | fairwinds! | https://github.com/sailboat-anon/wifi-pineapple-mark-vii
 # hak5 wifi pineapple | loot-n-scoot.sh (formerly ohc-api.sh) | tested on mk 7 
 # auto-submit captured WPA handshakes (.pcap) to onlinehashcrack.com & wpa-sec.stanev.org, receive email upon completion | persistent handshake loot 
