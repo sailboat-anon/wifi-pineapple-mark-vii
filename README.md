@@ -31,26 +31,6 @@ export VISUAL=nano; crontab -e
 
 Persistent handshake storage: /root/loot/handshakes | Transaction logs: /root/loot/handshakes/logs
 
-
-```                  .   Fairwinds!
-                .'|     .8
-               .  |    .8:
-              .   |   .8;:        .8
-             .    |  .8;;:    |  .8;
-            .     n .8;;;:    | .8;;;
-           .      M.8;;;;;:   |,8;;;;;
-          .    .,"n8;;;;;;:   |8;;;;;;
-         .   .',  n;;;;;;;:   M;;;;;;;;
-        .  ,' ,   n;;;;;;;;:  n;;;;;;;;;
-       . ,'  ,    N;;;;;;;;:  n;;;;;;;;;
-      . '   ,     N;;;;;;;;;: N;;;;;;;;;;
-     .,'   .      N;;;;;;;;;: N;;;;;;;;;;
-    ..    ,       N6666666666 N6666666666
-    I    ,        M           M
-   ---nnnnn_______M___________M______mmnnn
-         "-.                          /
-  __________"-_______________________/_________
-  ```
 ![newUI](https://github.com/sailboat-anon/wifi-pineapple-mark-vii/blob/main/img/newUI.png)
 
 ![successful_run](https://github.com/sailboat-anon/wifi-pineapple-mark-vii/blob/main/img/successful%20run.png)
